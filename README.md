@@ -1,5 +1,5 @@
 # Gamehacking-PlayBook
-#Simple Get Process Id 
+**Simple Get Process Id**
 ```c++
 //I will add more explanation to lines later
 DWORD GetProcId(const char* procName)
@@ -39,13 +39,13 @@ DWORD procId;
 //OpenProcess requires a process id to actually work we will cover OpenProcess later
 procId = GetProcId("notepad.exe");
 ```
-#DLL injection
+**DLL injection**
 A classic amongst game hacking or just generally malware </br>
 This forcibly loads a dynamic link library into a target process allowing inside access to any memory allocation in the process</br>
 There are a million ways to do dll injection some being sneakier than others </br>
 I will add c++ code showing a way to do it later </br>
 
-#Random Generation
+**Random Generation**
 My god this quite literally exists in every single game ever and every "cheat" loader ever.</br>
 Randomly generated maps and bullet spread are prime examples of usage cases </br>
 As for cheat devs they use this to randomize file names or console/window titles for there loader </br>
@@ -78,11 +78,11 @@ There are 3 functions needed to do this on windows </br>
 	}
 ```
 -And Finally putting it all together
-```
+```c++
 	void RandomExe(size_t size) //Renames active file something random on startup to prevent signatures size_t is for the length of the file name
 	{
 		std::string name = RandString(size) + ".exe";//Generating a beautifully named exe 
 		std::rename(Path().c_str(), name.c_str()); //And applying it
 	}
 ```
-#Thats all for now folks more to be added later because this was written on 8/1/2021 at 10:03pm
+**Thats all for now folks more to be added later because this was written on 8/1/2021 at 10:03pm**
